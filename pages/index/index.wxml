@@ -3,7 +3,7 @@
   <view class="location-search {{ search ? 'search-active' : ''}}">
     <view class="location">
       <image src="/images/index/icon_location.png"></image>
-      <text>定位中...</text>
+      <text>{{position ? position : '定位中...'}}</text>
     </view>
     <view class="search">
       <image src="/images/index/icon_search.png"></image>

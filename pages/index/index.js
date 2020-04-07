@@ -21,7 +21,8 @@ Page({
     select1: true,
     select2: false,
     select3: false,
-    search: false
+    search: false,
+    position: ""
   },
 
   /**
@@ -67,10 +68,31 @@ Page({
   },
 
   /**
+   * 城市定位
+   */
+  currentLocation() {
+    let that = this;
+    wx.getLocation({
+      type: "wgs84",
+      success(res) {
+        console.log(res);
+        wx.request({
+          url: "http://api.go2map.com/engine/api/regeocoder/json?points=" + res.longitude + "," + res.latitude + "&type=1",
+          success(res) {
+            that.setData({
+              position: res.data.response.data[0].city
+            })
+          }
+        })
+      }
+    })
+  },
+
+  /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.currentLocation();
   },
 
   /**
