@@ -1,0 +1,62 @@
+<view class="body">
+  <!-- 商家店铺信息 -->
+  <view class="page-head">
+    <view class="shop-info">
+      <image src="/images/index/icon_11.jpg"></image>
+      <view class="introduce">
+        <text class="name">最好吃麻辣香锅(西湖店)</text>
+        <text class="message">公告：欢迎光临最好吃麻辣香锅，本店今日8折优惠</text>
+      </view>
+      <view class="collect">收藏</view>
+    </view>
+    <view class="line"></view>
+    <view class="preferential">满30减11；满60减19；满100减35</view>
+  </view>
+  <!-- 产品展示区 -->
+  <view class="page-container">
+    <scroll-view class="menu-list" scroll-y>
+      <view class="menu {{ index == menuNumber ? 'menu-active' : ''}}" wx:for="{{ menuList }}" wx:key="index" data-id="{{ index }}" catchtap="menuActive">{{ item }}</view>
+    </scroll-view>
+    <view class="product-list">
+      <view class="title">所有产品</view>
+      <scroll-view scroll-y>
+        <view class="product" wx:for="{{ productList }}" wx:key="index">
+          <image src="{{ item.imgUrl }}"></image>
+          <view class="product-info">
+            <text class="product-name">{{ item.name }}</text>
+            <text class="product-price">￥{{ item.price }}</text>
+            <view class="sale-count">月销{{ item.saleCount }}</view>
+          </view>
+          <view class="add" bindtap="addToCart" data-product="{{ item }}">
+            <image src="/images/shop/plus.png"></image>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <!-- 添加到购物车的产品展示 -->
+  <view class="my-choose" hidden="{{ myChoose }}">
+    <scroll-view scroll-y class="choose-list">
+      <view class="choose-wrapper">
+        <view class="choose" wx:for="{{ cartList }}" wx:key="index">
+          <image src="{{ item.imgUrl }}"></image>
+          <text class="title">{{ item.name }}</text>
+          <text class="price">￥{{ item.price }}</text>
+          <view class="remove" data-index="{{ index }}" bindtap="remove">
+            <view></view>
+          </view>
+        </view>
+        <text class="choose-total">总价：￥{{total}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 底部购物 结算-->
+  <view class="page-footer">
+    <view class="cart" bindtap="showInfo">
+      <image src="/images/shop/cart.png"></image>
+      <text class="count">{{ cartList.length }}</text>
+    </view>
+    <text class="total">￥{{ preferentialPrice }}</text>
+    <button class="balance" size="mini" bindtap="toBalance">去结算</button>
+  </view>
+</view>

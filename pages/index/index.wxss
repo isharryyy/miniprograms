@@ -1,0 +1,159 @@
+.body {
+  width: 100%;
+  height: 100%;
+  background: #efefef;
+}
+/*搜索定位*/
+.location-search {
+  width:100%;
+  height: 60rpx;
+  padding: 0rpx 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  top: 0rpx;
+  z-index: 1;
+}
+.search-active {
+  background: #feb70f;
+}
+.location-search .location {
+  width: 30%;
+  height: 50rpx;
+  border-radius: 30rpx;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.location-search .location image {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0rpx 20rpx;
+}
+.location-search .location text {
+  font-size: 24rpx;
+  color: #fff;
+}
+.location-search .search {
+  width: 63%;
+  height: 50rpx;
+  margin-left: 10rpx;
+  border-radius: 30rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.location-search .search image {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0rpx 20rpx;
+}
+.location-search .search input {
+  font-size: 24rpx;
+  color: #666;
+  width: 77%;
+  height: 100%;
+}
+/*顶部轮播图*/
+.swiperImg navigator,
+.swiperImg image {
+  width: 100%;
+  height: 100%;
+}
+/*swiper菜单栏*/
+.swiper-menu {
+  margin-top: 10rpx;
+  background: #fff;
+}
+.swiper-menu .menu-row {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.swiper-menu .menu-row .menu-container {
+  width: 100rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.swiper-menu .menu-row .menu-container image {
+  width: 100%;
+  height: 100rpx;
+}
+.swiper-menu .menu-row .menu-container text {
+  width: 100%;
+  height: 20%;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+/*优惠专区*/
+.page-section {
+  width: 100%;
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+.page-section .title {
+  font-size: 30rpx;
+  font-weight: bold;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  position: relative;
+}
+.page-section .title::before {
+  content: "";
+  width: 100rpx;
+  height: 2rpx;
+  background: #000;
+  position: absolute;
+  left: 50%;
+  margin-left: -180rpx;
+  margin-top: 50rpx;
+}
+.page-section .title::after {
+  content: "";
+  width: 100rpx;
+  height: 2rpx;
+  background: #000;
+  position: absolute;
+  left: 50%;
+  margin-left: 80rpx;
+  margin-top: 50rpx;
+}
+/*排序*/
+.sort {
+  height: 200rpx;
+}
+.filter {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.filter .sort-title {
+  color: #999;
+  font-size: 26rpx;
+}
+.filter .sort-active {
+  color: #000;
+}
+/*排序下方页面*/
+.sort-result {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

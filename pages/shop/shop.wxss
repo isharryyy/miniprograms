@@ -1,0 +1,249 @@
+.body {
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+}
+/* 顶部商家信息区 */
+.page-head {
+  width: 100%;
+  height: 250rpx;
+  background: #feb70f;
+  padding: 20rpx;
+}
+.shop-info {
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+.shop-info image {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+}
+.shop-info .introduce {
+  width: 50%;
+  height: 120rpx;
+  line-height: 50rpx;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+  font-size: 28rpx;
+}
+.shop-info .introduce .message {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 24rpx;
+  color: #333;
+}
+.shop-info .collect {
+  width: 100rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border: 4rpx solid #000;
+  border-radius: 30rpx;
+  text-align: center;
+  font-size: 26rpx;
+  position: absolute;
+  top: 50rpx;
+  right:50rpx;
+}
+.page-head .line {
+  width: 93%;
+  border: 1rpx dashed #000;
+}
+.page-head .preferential {
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  color: #2f2f2f;
+}
+/* 产品展示区 */
+.page-container {
+  display: flex;
+  flex-direction: row;
+}
+.page-container scroll-view {
+  height: 800rpx;
+}
+.page-container .menu-list {
+  border-right: 1rpx solid #ddd;
+  width: 100rpx;
+}
+.page-container .menu {
+  width: 100%;
+  height:100rpx;
+  line-height: 100rpx;
+  font-size: 26rpx;
+  color: #2f2f2f;
+  text-align: center;
+  border-bottom: 1rpx solid #ddd;
+}
+.page-container .menu-active {
+  background: #fff;
+}
+.page-container .product-list {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+}
+.page-container .product-list .title {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  color: #2f2f2f;
+  padding-left: 30rpx;
+}
+.page-container .product-list scroll-view {
+  background: #fff;
+}
+.page-container .product-list .product {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1rpx solid #ddd;
+  width: 100%;
+  height: 150rpx;
+  margin-left: 30rpx;
+}
+.page-container .product-list .product image {
+  width: 120rpx;
+  height: 120rpx;
+}
+.page-container .product-list .product .product-info {
+  height: 110rpx;
+  margin-left: 40rpx;
+  font-size: 26rpx;
+  color: #2f2f2f;
+}
+.page-container .product-list .product .product-info .product-name {
+  font-size: 30rpx;
+}
+.page-container .product-list .product .product-info .product-price {
+  margin-left: 20rpx;
+}
+.page-container .product-list .product .product-info .sale-count {
+  margin-top: 40rpx;
+  color: #999;
+}
+.page-container .product-list .product .add {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 200rpx;
+  border-radius: 50%;
+  background: #feb70f;
+  text-align: center
+}
+.page-container .product-list .product .add image {
+  margin-top: 5rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+/*页脚结算*/
+.page-footer {
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  left: 0rpx;
+  bottom: 0rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #fff;
+}
+.page-footer .cart {
+  width: 80rpx;
+  height: 80rpx;
+  text-align: center;
+  margin-left: 60rpx;
+  position: relative;
+  background: #feb70f;
+  border-radius: 50%;
+}
+.page-footer .cart image {
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 10rpx;
+}
+.page-footer .cart .count {
+  display: inline-block;
+  width: 30rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  border-radius: 50%;
+  background: #f22;
+  position: absolute;
+  top: -8rpx;
+  right: -8rpx;
+  font-size: 22rpx;
+  color: #fff;
+}
+.page-footer .total {
+  margin-left: 50rpx;
+  font-size: 30rpx;
+}
+.page-footer button.balance {
+  background: #feb70f;
+  color: #fff;
+  margin-right: 20rpx;
+}
+/* 添加到购物车产品 */
+.my-choose {
+  width: 100%;
+  position: fixed;
+  left: 0rpx;
+  bottom: 100rpx;
+  z-index: 5;
+  background: #fff;
+}
+.my-choose .choose-list {
+  max-height: 300rpx;
+  width: 100%;
+}
+.my-choose .choose-list .choose-wrapper {
+  width: 100%;
+}
+.my-choose .choose-list .choose-total {
+  display: inline-block;
+  width: 90%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: right;
+}
+.my-choose .choose-list .choose {
+  height: 120rpx;
+  line-height: 120rpx;
+  display: flex;
+  border-bottom: 1rpx solid #ddd;
+}
+.my-choose .choose-list .choose image {
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 40rpx;
+  vertical-align: middle;
+}
+.my-choose .choose-list .choose .title {
+  margin-left: 40rpx;
+}
+.my-choose .choose-list .choose .price {
+  margin-left: 20rpx;
+  font-size: 26rpx;
+  color: #2f2f2f;
+}
+.my-choose .choose-list .choose .remove {
+  width: 50rpx;
+  height: 40rpx;
+  margin: 40rpx 0rpx 0rpx 300rpx;
+  background: #ddd;
+  border-radius: 50%;
+}
+.my-choose .choose-list .choose .remove view {
+  width: 40rpx;
+  height: 10rpx;
+  background: #f00;
+  margin: 15rpx 0rpx 0rpx 5rpx;
+}

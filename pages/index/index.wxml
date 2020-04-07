@@ -1,0 +1,143 @@
+<view class="body">
+  <!-- 定位搜索 -->
+  <view class="location-search {{ search ? 'search-active' : ''}}">
+    <view class="location">
+      <image src="/images/index/icon_location.png"></image>
+      <text>定位中...</text>
+    </view>
+    <view class="search">
+      <image src="/images/index/icon_search.png"></image>
+      <input placeholder="美食"></input>
+    </view>
+  </view>
+  <!-- 轮播图 -->
+  <swiper class="swiperImg" indicator-dots autoplay interval="3500" duration="1000" circular>
+    <block wx:for="{{ swiperImg }}" wx:key="id">
+      <swiper-item>
+        <navigator url="/pages/shop/shop">
+          <image src="{{ item.imgUrl }}"></image>
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 菜单栏 -->
+  <swiper class="swiper-menu">
+    <swiper-item>
+      <view class="menu-row">
+        <view class="menu-container">
+          <image src="/images/index/icon_1.jpg"></image>
+          <text>黑暗料理</text>
+        </view>
+        <view class="menu-container">
+          <image src="/images/index/icon_1.jpg"></image>
+          <text>黑暗料理</text>
+        </view>
+        <view class="menu-container">
+          <image src="/images/index/icon_1.jpg"></image>
+          <text>黑暗料理</text>
+        </view>
+        <view class="menu-container">
+          <image src="/images/index/icon_1.jpg"></image>
+          <text>黑暗料理</text>
+        </view>
+      </view>
+      <view class="menu-row">
+        <view class="menu-container">
+          <image src="/images/index/icon_1.jpg"></image>
+          <text>黑暗料理</text>
+        </view>
+        <view class="menu-container">
+          <image src="/images/index/icon_1.jpg"></image>
+          <text>黑暗料理</text>
+        </view>
+        <view class="menu-container">
+          <image src="/images/index/icon_1.jpg"></image>
+          <text>黑暗料理</text>
+        </view>
+        <view class="menu-container">
+          <image src="/images/index/icon_1.jpg"></image>
+          <text>黑暗料理</text>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="menu-row">
+        <view class="menu-container">
+          <image src="/images/index/icon_1.jpg"></image>
+          <text>黑暗料理</text>
+        </view>
+        <view class="menu-container">
+          <image src="/images/index/icon_1.jpg"></image>
+          <text>黑暗料理</text>
+        </view>
+        <view class="menu-container">
+          <image src="/images/index/icon_1.jpg"></image>
+          <text>黑暗料理</text>
+        </view>
+        <view class="menu-container">
+          <image src="/images/index/icon_1.jpg"></image>
+          <text>黑暗料理</text>
+        </view>
+      </view>
+      <view class="menu-row">
+        <view class="menu-container">
+          <image src="/images/index/icon_1.jpg"></image>
+          <text>黑暗料理</text>
+        </view>
+        <view class="menu-container">
+          <image src="/images/index/icon_1.jpg"></image>
+          <text>黑暗料理</text>
+        </view>
+        <view class="menu-container">
+          <image src="/images/index/icon_1.jpg"></image>
+          <text>黑暗料理</text>
+        </view>
+        <view class="menu-container">
+          <image src="/images/index/icon_1.jpg"></image>
+          <text>黑暗料理</text>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+  <!-- 优惠专区 -->
+  <view class="page-section preferential">
+    <view class="title">优惠专区</view>
+    <navigator url="/pages/shop/shop">
+      <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583515080613&di=bf108bb74bb1dbaae54df8775f2ed733&imgtype=0&src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fphotoblog%2F1009%2F16%2Fc5%2F5219961_5219961_1284637436702.jpg"></image>
+    </navigator>
+  </view>
+  <!-- 为你优选 -->
+   <view class="page-section preferential">
+    <view class="title">为你优选</view>
+    <navigator url="/pages/shop/shop">
+      <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583516426073&di=951087f2086a127abb730673abb4e910&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20190625%2Fdeeaae235c9e4170aa4e02bf1b7c136f.jpeg"></image>
+    </navigator>
+  </view>
+  <!-- 特色频道 -->
+  <view class="page-section preferential">
+    <view class="title">特色频道</view>
+    <navigator url="/pages/shop/shop">
+      <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583516552171&di=67fc3afcc381d05a149f2bcfea0b19ad&imgtype=0&src=http%3A%2F%2Fpic29.nipic.com%2F20130518%2F8401974_115504590124_2.jpg"></image>
+    </navigator>
+  </view>
+  <!-- 附近商家 -->
+  <view class="page-section sort">
+    <view class="title">附近商家</view>
+    <view class="filter">
+      <view class="sort-title {{ select1 ? 'sort-active' : ''}}" bindtap="active" data-id="1">综合排序</view>
+      <view class="sort-title {{ select2 ? 'sort-active' : ''}}" bindtap="active" data-id="2">销量排序</view>
+      <view class="sort-title {{ select3 ? 'sort-active' : ''}}" bindtap="active" data-id="3">距离最近</view>
+    </view>
+  </view>
+  <view class="sort-result">
+    <navigator url="/pages/shop/shop">
+      <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583595379405&di=4c720c4ec815060835311bfaadc69c1c&imgtype=0&src=http%3A%2F%2Fimages.3158.cn%2Fdata%2Fattachment%2Fcanyin%2Farticle%2F2015%2F09%2F18%2Fea271363fb9350a35efaf153af21e137.jpg"></image>
+    </navigator>
+    <navigator url="/pages/shop/shop">
+      <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583595379405&di=4c720c4ec815060835311bfaadc69c1c&imgtype=0&src=http%3A%2F%2Fimages.3158.cn%2Fdata%2Fattachment%2Fcanyin%2Farticle%2F2015%2F09%2F18%2Fea271363fb9350a35efaf153af21e137.jpg"></image>
+    </navigator>
+    <navigator url="/pages/shop/shop">
+      <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583595379405&di=4c720c4ec815060835311bfaadc69c1c&imgtype=0&src=http%3A%2F%2Fimages.3158.cn%2Fdata%2Fattachment%2Fcanyin%2Farticle%2F2015%2F09%2F18%2Fea271363fb9350a35efaf153af21e137.jpg"></image>
+    </navigator>
+  </view>
+</view>
